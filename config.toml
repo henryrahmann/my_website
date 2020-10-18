@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https:henryrahmann.netlify.app/"
+baseURL = "https://henryrahmann.netlify.app/"
 languageCode = "en-us"
 title = "Forty"
 theme = "forty"
