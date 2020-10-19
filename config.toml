@@ -7,8 +7,6 @@ theme = "forty"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 
-# Enter your disqus shortname to enable comments
-disqusShortname = ""
 
 [params]
   # You can use Markdown syntax for urls [text](//url.to/source)
@@ -37,8 +35,8 @@ disqusShortname = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Forty"
-    subtitle = "By HTML5 Up"
+    title = "Henry"
+    subtitle = "Rahmann"
     menu = "Menu"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
@@ -81,9 +79,9 @@ disqusShortname = ""
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Hi, my name is Harry"
-    subtitle = "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP\nAND RELEASED UNDER THE CREATIVE COMMONS."
-    buttonText = "Get Started"
+    title = "Hi, I'm Henry"
+    subtitle = "German kid who grew up in South Africa, now studying Finance in London "
+    buttonText = "Here we go"
 
 
   # Tiles Section
