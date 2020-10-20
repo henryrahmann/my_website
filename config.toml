@@ -38,7 +38,7 @@ googleAnalytics = ""
     logo = "logo.png"
 
     [[params.navigation.links]]
-      name = "Intro"
+      name = "Home"
       url = "#"
 
     [[params.navigation.links]]
@@ -46,12 +46,9 @@ googleAnalytics = ""
       url = "blogs"
 
     [[params.navigation.links]]
-      name = "Serious Play.. "
+      name = "About Me"
       url = "blogs/ipsum"
 
-    [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -73,8 +70,6 @@ googleAnalytics = ""
 
   # Banner section
   [params.banner]
-    # To change the background image on the homepage banner, replace 'banner.jpg' in
-    # the 'static/img' folder.
     title = "Hi, I'm Henry"
     subtitle = "Kong Kong | Cape Town | Frankfurt | London"
     buttonText = "Here we go"
@@ -90,22 +85,22 @@ googleAnalytics = ""
       subtitle = "A little bit about myself"
       image = "henry.jpg"
       url = "blogs/overview"
-
-    [[params.tiles.showcase]]
-      title = "Data Projects"
-      subtitle = "Data Analytics for Finance"
-      image = "pic02.jpg"
-      url = "blogs/tempus"
-
+    
     [[params.tiles.showcase]]
       title = "What's up with the aeroplane logo?"
       subtitle = "My greatest passion"
       image = "airstrip.jpg"
       url = "blogs/magna"
+    
+    [[params.tiles.showcase]]
+      title = "An example of my latest work"
+      subtitle = "Data Analytics for Finance"
+      image = "pic02.jpg"
+      url = "blogs/tempus"
 
     [[params.tiles.showcase]]
-      title = "Ipsum"
-      subtitle = "Nisl Sed Aliquam"
+      title = "Another example of my latest work"
+      subtitle = "More data analytics"
       image = "pic04.jpg"
       url = "blogs/ipsum"
 
@@ -144,7 +139,6 @@ googleAnalytics = ""
     [[params.contact.email]]
     title = "Reach out"
     email = "hrahmann.mfa2021@london.edu"
-
 
     [[params.contact.address]]
     title = "Address"
