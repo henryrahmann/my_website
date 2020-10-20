@@ -92,7 +92,7 @@ googleAnalytics = ""
       title = "An example of my latest work"
       subtitle = "Data Analytics for Finance"
       image = "pic02.jpg"
-      url = "blogs/blog3"
+      url = "blogs/gdp"
 
     [[params.tiles.showcase]]
       title = "Another example of my latest work"
