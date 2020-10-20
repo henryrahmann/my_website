@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://henryrahmann.netlify.app/"
 languageCode = "en-us"
-title = "HRR"
+title = "H.Rahmann"
 theme = "forty"
 
 # Enter your tracking code to enable Google Analytics
@@ -42,7 +42,7 @@ googleAnalytics = ""
       url = "#"
 
     [[params.navigation.links]]
-      name = "Serious Business.."
+      name = "R Projects"
       url = "blogs"
 
     [[params.navigation.links]]
@@ -76,7 +76,7 @@ googleAnalytics = ""
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
     title = "Hi, I'm Henry"
-    subtitle = "German kid who grew up in South Africa, now studying Finance in London "
+    subtitle = "Kong Kong | Cape Town | Frankfurt | London"
     buttonText = "Here we go"
 
 
@@ -87,9 +87,9 @@ googleAnalytics = ""
     
     [[params.tiles.showcase]]
       title = "Henry in 3 Paragraphs"
-      subtitle = "Ipsum Dolor Sit Amet"
+      subtitle = "A little bit about myself"
       image = "henry.jpg"
-      url = "blogs/aliquam"
+      url = "blogs/overview"
 
     [[params.tiles.showcase]]
       title = "Data Projects"
@@ -99,7 +99,7 @@ googleAnalytics = ""
 
     [[params.tiles.showcase]]
       title = "What's up with the aeroplane logo?"
-      subtitle = "Only my greatest passion"
+      subtitle = "My greatest passion"
       image = "airstrip.jpg"
       url = "blogs/magna"
 
@@ -114,7 +114,7 @@ googleAnalytics = ""
   [params.two]
     enable = true
     title = "Now what?"
-    subtitle = """If you find any of what I've described vaguely interesting and for some reason would like to see it all again, hit the button below."""
+    subtitle = """If you find any of what I've done vaguely interesting and would like to see it all again, hit the button below."""
     buttonText = "Get Started"
     url = "blogs"
 
@@ -123,7 +123,7 @@ googleAnalytics = ""
   [params.contact]
     enable = true
     buttonSend = "Go!"
-    buttonClear = "I've made a mistake"
+    buttonClear = "Clear"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -142,12 +142,9 @@ googleAnalytics = ""
     # You can add multiple emails, phone numbers, or addresses
     # by copying the corresponding map with frontmatter code.
     [[params.contact.email]]
-    title = "For important stuff"
+    title = "Reach out"
     email = "hrahmann.mfa2021@london.edu"
 
-    [[params.contact.phone]]
-    title = "For not so important stuff"
-    phone = "(+44) 000-0000 x1234"
 
     [[params.contact.address]]
     title = "Address"
