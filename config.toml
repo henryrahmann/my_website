@@ -149,5 +149,5 @@ theme = "forty"
 
     [[params.footer.social]]
       icon = "fa-linkedin"
-      url= "www.linkedin.com/in/henry-rahmann-64508858"
+      url= "https://www.linkedin.com/in/henry-rahmann-64508858"
       label = "LinkedIn"
