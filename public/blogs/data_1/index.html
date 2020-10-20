@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Your description">
+	<meta name="author" content="Henry">
+	<meta name="generator" content="Hugo 0.76.5" />
+	<title>GDP Per Capital Analysis &middot; HR</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+</head>
+
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="/" class="logo"><img src="/img/logo.png" alt="" /></a>
+        <nav>
+            <a href="#menu"></a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="/">Home</a></li>
+            
+                <li><a href="/blogs">About Me</a></li>
+            
+                <li><a href="/projects">Projects</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+                <li><a href="/blogs" class="button special fit">Get Started</a></li>
+            
+            
+                <li><a href="/" class="button fit">Log In</a></li>
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>GDP Per Capital Analysis</h1>
+                            </header>
+                            
+                                <span class="image main"><img src="/img/blogs/pic08.jpg" alt="" /></span>
+                            
+                            <h1 id="challenge-2gdp-components-over-time-and-among-countries">Challenge 2:GDP components over time and among countries</h1>
+<p>To look at the differences in GDP accross countries, we have focussed on Germany, India, and USA. In order to gain a better understanding of their components and trends, we have sorted, cleaned, and filtered the data before plotting the relevant data points in the charts that follow:</p>
+<pre><code class="language-{r" data-lang="{r">
+UN_GDP_data  &lt;-  read_excel(here::here(&quot;data&quot;, &quot;Download-GDPconstant-USD-countries.xls&quot;), # Excel filename
+                sheet=&quot;Download-GDPconstant-USD-countr&quot;, # Sheet name
+                skip=2) # Number of rows to skip
+
+</code></pre><p>To make the data easier to handle, we have changed the figures, renamed the indicators and pivoted the data.</p>
+<pre><code class="language-{r" data-lang="{r">
+#Pivoting the data and dividing the numbers
+tidy_GDP_data  &lt;- UN_GDP_data %&gt;% 
+  pivot_longer(!c(CountryID,Country,IndicatorName),names_to=&quot;years&quot;, values_to=&quot;amount&quot;) %&gt;%
+  mutate(amount=amount/1e9)
+
+#Assigning new names to indicator types
+new_names &lt;- c(&quot;Final consumption expenditure&quot;=&quot;Final_Consumption&quot;,
+               &quot;Household consumption expenditure (including Non-profit institutions serving households)&quot; = &quot;Household_Expenditure&quot;,
+               &quot;General government final consumption expenditure&quot; = &quot;Government_Expenditure&quot;,
+               &quot;Gross capital formation&quot; = &quot;Gross_Capital_Formation&quot;,
+               &quot;Gross fixed capital formation (including Acquisitions less disposals of valuables)&quot; = &quot;Fixed_Capital_Formation&quot;,
+               &quot;Exports of goods and services&quot; = &quot;Exports&quot;,
+               &quot;Imports of goods and services&quot; = &quot;Imports&quot;,
+               &quot;Gross Domestic Product (GDP)&quot; = &quot;GDP&quot;,
+               &quot;Agriculture, hunting, forestry, fishing (ISIC A-B)&quot; = &quot;Agriculture, FOrestry, Hunting&quot;,
+               &quot;Mining, Manufacturing, Utilities (ISIC C-E)&quot; = &quot;Mining_Manufacturing_Utilities&quot;,
+               &quot;Manufacturing (ISIC D)&quot; = &quot;Manufacturing&quot;,
+               &quot;Construction (ISIC F)&quot; = &quot;Construction&quot;,
+               &quot;Wholesale, retail trade, restaurants and hotels (ISIC G-H)&quot; = &quot;Wholesale_Retail_Hospitality&quot;,
+               &quot;Transport, storage and communication (ISIC I)&quot; = &quot;Transport_Storage_Communication&quot;,
+               &quot;Other Activities (ISIC J-P)&quot; = &quot;Other&quot;,
+               &quot;Total Value Added&quot; = &quot;Total_Value&quot;)
+
+tidy_GDP_data$IndicatorName &lt;- as.character(new_names[tidy_GDP_data$IndicatorName])
+</code></pre><p>Reproducing the given plot yields the following result:</p>
+<pre><code class="language-{r" data-lang="{r">knitr::include_graphics(here::here(&quot;images&quot;, &quot;gdp1.png&quot;), error = FALSE)
+</code></pre><pre><code class="language-{r,fig.height=6," data-lang="{r,fig.height=6,">
+# Defining the list of countries to compare
+country_list &lt;- c(&quot;United States&quot;,&quot;India&quot;, &quot;Germany&quot;)
+
+#Indicators required to reproduce the graph
+indicator_list &lt;- c(&quot;Gross_Capital_Formation&quot;,&quot;Exports&quot;, &quot;Government_Expenditure&quot;,&quot;Household_Expenditure&quot;, &quot;Imports&quot;)
+
+
+#Creating a smaller dataframe for the relevant countries, removing the ID column, filtering for required indicators
+comparison_countries &lt;- tidy_GDP_data %&gt;% 
+  filter(Country %in% country_list,
+         IndicatorName %in% indicator_list) %&gt;% 
+  select(!CountryID)
+
+ggplot(comparison_countries,aes(x=years,
+                                y=amount,
+                                group=IndicatorName,
+                                color=IndicatorName))+
+  geom_line(size=1)+
+  facet_wrap(~Country)+
+  theme_bw()+
+  scale_x_discrete(breaks = c(&quot;1970&quot;,&quot;1980&quot;,&quot;1990&quot;,&quot;2000&quot;,&quot;2010&quot;))+
+  labs(title = &quot;GDP components over time&quot;, subtitle = &quot;In constant 2010 USD&quot;, col=&quot;Components of GDP&quot;,y=&quot;Billion US$&quot;,x=&quot;&quot;)
+
+
+</code></pre><p>To double check the given GDP data, we have manually calculated the GDP with the components Household Expenditure (Consumption <em>C</em>), Gross Capital Formation (business investment <em>I</em>), Government Expenditure (G) and Net Exports (exports - imports). There are slight differences between our calculations and those given in the UN dataframe.</p>
+<pre><code class="language-{r,fig.height=6," data-lang="{r,fig.height=6,">options(digits=3)
+options(scipen=999)
+
+
+#Including GDP in the indicators list
+indicator_list_2 &lt;- c(&quot;GDP&quot;,&quot;Gross_Capital_Formation&quot;,&quot;Exports&quot;, &quot;Government_Expenditure&quot;,&quot;Household_Expenditure&quot;, &quot;Imports&quot;)
+
+
+#Creating a smaller dataframe for the relevant countries, removing the ID column, filtering for required indicators
+ratio_components &lt;- tidy_GDP_data %&gt;% 
+  filter(Country %in% country_list,
+         IndicatorName %in% indicator_list_2) %&gt;% 
+  select(!CountryID) %&gt;%
+  
+#Putting data into wide format in order to perform calculations (create GDP_new + proportions)
+  pivot_wider(names_from = &quot;IndicatorName&quot;,values_from=&quot;amount&quot;) %&gt;% 
+  mutate(&quot;net_exports&quot;= Exports - Imports,
+         &quot;GDP_new&quot;=Gross_Capital_Formation+
+                   Government_Expenditure+ 
+                   Household_Expenditure+ 
+                   net_exports,
+         &quot;GDP_diff&quot;= (GDP_new-GDP)/GDP,
+         &quot;Gross capital formation&quot;=Gross_Capital_Formation/GDP_new,
+         &quot;Government Expenditure&quot;=Government_Expenditure/GDP_new,
+         &quot;Household Expenditure&quot;= Household_Expenditure/GDP_new,
+         &quot;Net Exports&quot;=net_exports/GDP_new) %&gt;% 
+  
+#Putting data back to long, tidy format
+  select(1:2,11:15) %&gt;% 
+  pivot_longer(cols=c(&quot;Gross capital formation&quot;,
+                      &quot;Government Expenditure&quot;,
+                      &quot;Household Expenditure&quot;,
+                      &quot;Net Exports&quot;),
+               names_to=&quot;IndicatorName&quot;,
+               values_to=&quot;GDP_proportions&quot;)
+
+
+#Analyzing difference between GDP in dataframe (GDP) and newly calculated GDP (GDP_new)
+GDP_difference &lt;- ratio_components %&gt;% 
+  select(1:3) %&gt;% 
+  group_by(Country) %&gt;% 
+  summarize(min_diff= min(GDP_diff)*100,
+            mean_diff= mean(GDP_diff)*100,
+            max_diff= max(GDP_diff)*100)
+
+</code></pre><p>After manually calculating the GDP from the data provided, we observe the following differences to the GDP provided as part of the dataset:</p>
+<p>Germany: Annual differences to GDP ranging from -0.41% to +3.56%, with the mean difference +1.14%</p>
+<p>India: Annual differences to GDP ranging from -6.35% to +7.41%, with the mean difference +0.19%</p>
+<p>United States: Annual differences to GDP ranging from -0.05% to +4.55%, with the mean difference +1.27%</p>
+<p>Reproducing the GDP component (as %) chart:</p>
+<pre><code class="language-{r," data-lang="{r,">knitr::include_graphics(here::here(&quot;images&quot;, &quot;gdp2.png&quot;), error = FALSE)
+</code></pre><pre><code class="language-{r," data-lang="{r,">
+
+#creating ggplot of selected data
+ggplot(ratio_components,aes(x=years,
+                            y=GDP_proportions,
+                            group=IndicatorName,
+                            color=IndicatorName))+
+  geom_line(size=1)+
+  facet_wrap(~Country)+
+  theme_bw()+
+  scale_x_discrete(breaks = c(&quot;1970&quot;,&quot;1980&quot;,&quot;1990&quot;,&quot;2000&quot;,&quot;2010&quot;))+
+  scale_y_continuous(labels=scales::percent_format(accuracy = 1))+
+  labs(title = &quot;GDP and its breakdown at constant 2010 prices in US Dollars&quot;,
+       col=&quot;GDP components&quot;,
+       y=&quot;Proportion&quot;,
+       x=&quot;&quot;,
+       caption = &quot;Source: United Nations, https://unstats.un.org/unsd/snaama/Downloads&quot;)
+
+  
+</code></pre><p>The initial analysis of the chart reveals the following observations:</p>
+<p>Examining the chart, we observe the following: 
+Comparing all three countries, one can see that the ratios of the components making up GDP are the most stable in Germany, followed by the United States, and then India. This is to be expected as Germany and the US could be considered very developed, stable economies, while India represents a fast growing, dynamic, emerging economy.</p>
+<p>Germany:
+Most notably, the net exports have risen in Germany over the period starting in 2000, while capital formation and household consumption have decreased to compensate for this. Taking a closer look at the data reveals that this trend is driven by exports growing at a higher rate than imports. Considering Germany’s GDP has grown (in absolute terms) since 2000, it may be interesting to examine whether individual components have stagnated or if all have grown, albeit as very different rates. Despite the (almost) continuous absolute growth of GDP in Germany over the examined time period, the individual components of GDP and their ratios have remained constant.</p>
+<p>India: 
+Most notably, one can observe that the most movement has occurred within Household expenditure and Gross capital formation since 2000. This may be expected in a fast growing, emerging economy, as more of the generated income is available to longer term investment, rather than short term consumption. These two components, since approximately 2000 have consistently and quickly moved in opposing directions (in terms of percentage points) until approximately 2015, when all indicators show stabilisation. Considering that GDP in absolute terms has been growing at rates in excess of 6% annually in the last years, it is interesting to note that government spending has kept pace, as indicated by a stable % contribution. This indicates a strong support of growth by the government through investment in infrastructure and other stimuli.</p>
+<p>USA: 
+The GDP breakdown of the USA may best be characterised by a steady decrease in government expenditure, with a corresponding increase in household expenditure. Net exports have decreased, particularly since the late 90s, which is indicative of the move of manufacturing to other parts of the world, predominantly Asia. Interestingly, in the same time, net exports in Germany increased which shows that Germany was better able to maintain the value of its net exports, while the export output of the USA stagnated relative to imports.</p>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="www.linkedin.com/in/henry-rahmann-64508858" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; henry&#39;s brain</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+
+    
+
+    
+
+    </body>
+</html>

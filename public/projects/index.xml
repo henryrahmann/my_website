@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Analysis Projects on HR</title>
+    <link>/projects/</link>
+    <description>Recent content in Data Analysis Projects on HR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Oct 2020 22:27:21 -0500</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GDP Analysis</title>
+      <link>/projects/gdp_data/</link>
+      <pubDate>Tue, 31 Oct 2017 22:27:21 -0500</pubDate>
+      
+      <guid>/projects/gdp_data/</guid>
+      <description>Challenge 2:GDP components over time and among countriesTo look at the differences in GDP accross countries, we have focussed on Germany, India, and USA. In order to gain a better understanding of their components and trends, we have sorted, cleaned, and filtered the data before plotting the relevant data points in the charts that follow:
+UN_GDP_data &amp;lt;- read_excel(here::here(&amp;quot;data&amp;quot;, &amp;quot;Download-GDPconstant-USD-countries.xls&amp;quot;), # Excel filenamesheet=&amp;quot;Download-GDPconstant-USD-countr&amp;quot;, # Sheet nameskip=2) # Number of rows to skipTo make the data easier to handle, we have changed the figures, renamed the indicators and pivoted the data.</description>
+    </item>
+    
+  </channel>
+</rss>
