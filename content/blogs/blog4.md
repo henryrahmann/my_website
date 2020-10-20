@@ -2,11 +2,13 @@
 categories:
 - ""
 - ""
-date: "2017-10-31T22:42:51-05:00"
-description: Born in Hong Kong, grew up in South Africa, after a few years in Germany I found my way to London.
+date: "2017-10-31T21:28:43-05:00"
+description: "Maybe Beer analysis?"
 draft: false
-image: pic07.jpg
+image: pic10.jpg
 keywords: ""
-slug: overview
-title: An Overview
+slug:data 2
+title: some other R homework
 ---
+
+back story here

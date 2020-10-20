@@ -7,6 +7,6 @@ description: Project example will go here
 draft: false
 image: pic08.jpg
 keywords: ""
-slug: tempus
+slug: data 1
 title: GDP Per Capital Analysis
 ---

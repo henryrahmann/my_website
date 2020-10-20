@@ -2,13 +2,13 @@
 categories:
 - ""
 - ""
-date: "2017-10-31T21:28:43-05:00"
-description: "The basics"
+date: "2017-10-31T22:42:51-05:00"
+description: Born in Hong Kong, grew up in South Africa, after a few years in Germany I found my way to London.
 draft: false
-image: pic10.jpg
+image: pic07.jpg
 keywords: ""
-slug: ipsum
-title: Henry Blog 1
+slug: overview
+title: An Overview
 ---
 
-back story here
+3 paragraphs about me
