@@ -7,7 +7,7 @@ description: "Maybe Beer analysis?"
 draft: false
 image: pic10.jpg
 keywords: ""
-slug:data 2
+slug: data_2
 title: some other R homework
 ---
 
