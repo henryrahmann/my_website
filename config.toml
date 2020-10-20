@@ -92,15 +92,15 @@ googleAnalytics = ""
       url = "blogs/aliquam"
 
     [[params.tiles.showcase]]
-      title = "Creative header 1"
-      subtitle = "Feugiat Amet Tempus"
+      title = "Data Projects"
+      subtitle = "Data Analytics for Finance"
       image = "pic02.jpg"
       url = "blogs/tempus"
 
     [[params.tiles.showcase]]
-      title = "Creative header 2"
-      subtitle = "Lorem Etiam Nullam"
-      image = "pic03.jpg"
+      title = "What's up with the aeroplane logo?"
+      subtitle = "Only my greatest passion"
+      image = "airstrip.jpg"
       url = "blogs/magna"
 
     [[params.tiles.showcase]]
