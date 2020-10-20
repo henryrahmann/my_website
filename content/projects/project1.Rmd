@@ -85,10 +85,6 @@ tidy_GDP_data$IndicatorName <- as.character(new_names[tidy_GDP_data$IndicatorNam
 
 Reproducing the given plot yields the following result:
 
-```{r gdp1, out.width="100%"}
-knitr::include_graphics(here::here("images", "gdp1.png"), error = FALSE)
-```
-
 
 ```{r,fig.height=6, fig.width=9.25}
 
