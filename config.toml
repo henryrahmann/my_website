@@ -147,7 +147,6 @@ theme = "forty"
     enable = true
     copyright = "henry's brain"
 
-
     [[params.footer.social]]
       icon = "fa-linkedin"
       url= "www.linkedin.com/in/henry-rahmann-64508858"
