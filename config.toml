@@ -38,8 +38,7 @@ googleAnalytics = ""
     title = "Henry"
     subtitle = "Rahmann"
     menu = ""
-    # Optional logo as brand stored in img/
-    # logo = "logo.png"
+    logo = "logo.png"
 
     [[params.navigation.links]]
       name = "Intro"
@@ -154,7 +153,7 @@ googleAnalytics = ""
     phone = "(+44) 000-0000 x1234"
 
     [[params.contact.address]]
-    title = "London Business School"
+    title = "Address"
     street = "Regents Park"
     city = "London NW1 4SA"
     country = "United Kingdom"
