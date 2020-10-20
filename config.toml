@@ -42,12 +42,8 @@ googleAnalytics = ""
       url = "#"
 
     [[params.navigation.links]]
-      name = "R Projects"
+      name = "Passions and Projects"
       url = "blogs"
-
-    [[params.navigation.links]]
-      name = "About Me"
-      url = "blogs/ipsum"
 
 
     # Add custom links here by uncommenting code below. To remove links just delete
@@ -96,13 +92,13 @@ googleAnalytics = ""
       title = "An example of my latest work"
       subtitle = "Data Analytics for Finance"
       image = "pic02.jpg"
-      url = "blogs/data 1"
+      url = "blogs/data_1"
 
     [[params.tiles.showcase]]
       title = "Another example of my latest work"
       subtitle = "More data analytics"
       image = "pic04.jpg"
-      url = "blogs/data 2"
+      url = "blogs/data_2"
 
 
   # Section Type Two
