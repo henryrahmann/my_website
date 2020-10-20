@@ -5,24 +5,23 @@ categories:
 date: "2017-10-31T22:42:51-05:00"
 description: Born in Hong Kong, grew up in South Africa, after a few years in Germany I found my way to London.
 draft: false
-image:
+image:hong_kong.jpeg
 keywords: ""
 slug: overview
 title: An Overview
 ---
 
-# An Introduction to Henry
-As a fan of brevity, here are the most imporant points summarised into the key bullets: \
+As a fan of brevity, here are the most important points summarised into the key bullets:
 
-* Born in **Hong Kong**\
-* Grew up in **South Africa**\
-* Undergraduate studies in **Germany**\
-* Hoping to work in **Emerging Markets Investments** after my time at *LBS*\
+* Born in **Hong Kong**
+* Grew up in **South Africa**
+* Undergraduate studies in **Germany**
+* Hoping to work in **Emerging Markets Investments** after my time at *LBS*
 * Passionate about aviation and a **Private Pilot** since last year
 
 ## A bit more detail:
 
-Born to a German family which moved to Hong Kong, I spent the first six years of my life in Asia. Cape Town, South Africa was our second step, as my family settled and I completed my schooling close to Cape Town. You can find a nice picture of the _heart of Cape Town_ [here][1] Thinking about my future and career goals, I decided to move to Europe and commenced my studies at a university close to Frankfurt, Germany and spent the last years in Germany, South Africa, and Switzerland, completing various internships before coming to the UK.
+Born to a German family in Hong Kong, I spent the first six years of my life in Asia. Cape Town, South Africa was our second step, as my family settled and I completed my schooling close to Cape Town. You can find a nice picture of the _heart of Cape Town_ [here][1] Thinking about my future and career goals, I decided to move to Europe and commenced my studies at a university close to Frankfurt, Germany and spent the last years in Germany, South Africa, and Switzerland, completing various internships before coming to the UK.
 
 ## Passions and Goals
 
