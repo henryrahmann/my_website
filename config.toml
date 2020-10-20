@@ -35,9 +35,6 @@ googleAnalytics = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Henry"
-    subtitle = "Rahmann"
-    menu = ""
     logo = "logo.png"
 
     [[params.navigation.links]]
