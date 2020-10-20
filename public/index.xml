@@ -28,13 +28,15 @@ UN_GDP_data &amp;lt;- read_excel(here::here(&amp;quot;data&amp;quot;, &amp;quot;
     </item>
     
     <item>
-      <title>GDP Per Capital Analysis</title>
-      <link>/blogs/data_1/</link>
-      <pubDate>Tue, 31 Oct 2017 22:26:13 -0500</pubDate>
+      <title>IMDB Analysis</title>
+      <link>/projects/imdb_data/</link>
+      <pubDate>Tue, 31 Oct 2017 22:27:21 -0500</pubDate>
       
-      <guid>/blogs/data_1/</guid>
-      <description>Challenge 2:GDP components over time and among countries To look at the differences in GDP accross countries, we have focussed on Germany, India, and USA. In order to gain a better understanding of their components and trends, we have sorted, cleaned, and filtered the data before plotting the relevant data points in the charts that follow:
-UN_GDP_data &amp;lt;- read_excel(here::here(&amp;quot;data&amp;quot;, &amp;quot;Download-GDPconstant-USD-countries.xls&amp;quot;), # Excel filenamesheet=&amp;quot;Download-GDPconstant-USD-countr&amp;quot;, # Sheet nameskip=2) # Number of rows to skipTo make the data easier to handle, we have changed the figures, renamed the indicators and pivoted the data.</description>
+      <guid>/projects/imdb_data/</guid>
+      <description>IMDB ratings: Differences between directorsExamining the IMDB rating and focusing on the mean ratings for Steven Spielberg and Tim Burton, we initially reproduced the given plot before doing further calculations to determine the validity of the comparison.
+Reproducing the graph and running hypothesis tests on the differences between ratings of Steven Spielberg and Tim Burton:
+Our null and alternate hypotheses are:
+H0: The difference in the mean IMDB ratings for Steven Spielberg and Tim Burton is equal to zeroH1: The difference in the mean IMDB ratings for Steven Spielberg and Tim Burton is not equal to zero</description>
     </item>
     
     <item>
@@ -44,15 +46,6 @@ UN_GDP_data &amp;lt;- read_excel(here::here(&amp;quot;data&amp;quot;, &amp;quot;
       
       <guid>/blogs/aviation/</guid>
       <description>What does Henry do in his free time? In 2019 I took the time to attack a &amp;ldquo;bucket list item&amp;rdquo; - my pilots license. Many months of hard work paid off and I consider this one of my greatest personal achievements. Now I just need to find the time..</description>
-    </item>
-    
-    <item>
-      <title>some other R homework</title>
-      <link>/blogs/data_2/</link>
-      <pubDate>Tue, 31 Oct 2017 21:28:43 -0500</pubDate>
-      
-      <guid>/blogs/data_2/</guid>
-      <description>back story here</description>
     </item>
     
     <item>
