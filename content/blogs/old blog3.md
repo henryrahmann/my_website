@@ -7,7 +7,7 @@ description: Project example will go here
 draft: false
 image: pic08.jpg
 keywords: ""
-slug: data_1
+slug: 
 title: GDP Per Capital Analysis
 ---
 
