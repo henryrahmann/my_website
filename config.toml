@@ -88,7 +88,7 @@ googleAnalytics = ""
     [[params.tiles.showcase]]
       title = "Henry in 3 Paragraphs"
       subtitle = "Ipsum Dolor Sit Amet"
-      image = "pic01.jpg"
+      image = "henry.jpg"
       url = "blogs/aliquam"
 
     [[params.tiles.showcase]]
