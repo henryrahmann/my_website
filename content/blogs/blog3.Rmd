@@ -7,7 +7,7 @@ description: GDP Per Capita Analysis
 draft: false
 image: 
 keywords: ""
-slug: data_1
+slug: gdp
 title: Data Project 1
 ---
 
