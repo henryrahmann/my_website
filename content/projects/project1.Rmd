@@ -178,10 +178,6 @@ United States: Annual differences to GDP ranging from -0.05% to +4.55%, with the
 
 Reproducing the GDP component (as %) chart:
 
-```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "gdp2.png"), error = FALSE)
-```
-
 
 ```{r, fig.height=6, fig.width=12.5}
 

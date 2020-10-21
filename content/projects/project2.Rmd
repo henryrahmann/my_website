@@ -45,10 +45,6 @@ library(forcats)
 
 Examining the IMDB rating and focusing on the mean ratings for Steven Spielberg and Tim Burton, we initially reproduced the given plot before doing further calculations to determine the validity of the comparison.
 
-```{r directors, out.width="100%"}
-knitr::include_graphics(here::here("images", "directors.png"), error = FALSE)
-```
-
 Reproducing the graph and running hypothesis tests on the differences between ratings of Steven Spielberg and Tim Burton: 
 
 Our null and alternate hypotheses are:
